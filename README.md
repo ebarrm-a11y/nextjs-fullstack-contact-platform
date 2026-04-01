@@ -1,27 +1,61 @@
-# Fullstack Site Demo (Next.js + Tailwind)
+# Full-Stack Contact Platform (Next.js + TypeScript + Tailwind)
 
-A modern **marketing website / site demo** built with **Next.js (App Router)** and **TypeScript**, designed for clean UX, fast performance, and easy content updates.
+A full-stack web application built with **Next.js App Router** and **TypeScript**, focused on **systems integration, API-driven workflows, reusable architecture, and production-oriented frontend/backend structure**.
 
-This repository includes:
-- A multi-page site (App Router pages)
-- API routes for contact + basic admin content actions
-- Reusable UI components
-- MJML email templates (confirmation, follow-up, newsletter)
-- Project tooling and deployment scripts
+This project was designed to demonstrate practical engineering around:
+
+- **Frontend architecture** with reusable components and multi-page navigation
+- **Backend/API workflows** for contact handling and controlled admin content updates
+- **Rate limiting and environment-based configuration**
+- **Email template integration** with MJML
+- **Deployment and CI-ready project structure**
 
 ---
 
-## Highlights
+## What This Project Demonstrates
 
-- **Next.js App Router** (`src/app`) with dedicated pages: Home, About, Services, Portfolio, Pricing, Reviews, FAQ, Contact, Legal (Terms/Privacy), Success, and custom SEO routes.
-- **SEO-ready**: `sitemap.ts`, `robots.ts`, and metadata-friendly structure.
-- **Theming + UX**: Theme toggle and layout providers.
-- **i18n-ready**: Language utilities and a language toggle component.
-- **Contact flow**: Contact form component + API route.
-- **Admin endpoint**: Basic admin content route (for controlled updates).
-- **Rate limiting** helper for API protection.
-- **Emails**: MJML templates stored in `/emails` for transactional and marketing email layouts.
-- **Deployment script**: `scripts/deploy.sh` to automate release steps.
+- Building a **modern full-stack application** with both UI and server-side logic
+- Designing **API routes** for real user workflows
+- Structuring a project for **maintainability, scalability, and clean separation of concerns**
+- Supporting **content operations**, **email handling**, and **basic application protection**
+- Applying a practical software engineering approach across **frontend, backend, and deployment tooling**
+
+---
+
+## Core Features
+
+- **Next.js App Router** (`src/app`) with multiple pages and route-based structure
+- **Contact API workflow** for form submission handling
+- **Admin content endpoint** for controlled content updates
+- **Reusable UI components** for maintainable frontend development
+- **Rate limiting helper** for API protection
+- **MJML email templates** for transactional and marketing communication
+- **SEO support** through `sitemap.ts`, `robots.ts`, and metadata-friendly structure
+- **Theming and UX enhancements**, including theme toggle and layout providers
+- **i18n-ready utilities** and language toggle support
+- **Automation/deployment scripting** with shell-based tooling
+- **GitHub Actions CI workflow** for build validation
+
+---
+
+## Tech Stack
+
+**Frontend**
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+**Backend / Server Logic**
+- Next.js Route Handlers
+- API endpoints for contact and admin workflows
+
+**Tooling / DevOps**
+- GitHub Actions
+- Bash deployment script
+- Environment-based configuration
+
+**Email / Communication**
+- MJML templates
 
 ---
 
@@ -49,103 +83,14 @@ This repository includes:
 │  │  │  └─ admin/content/route.ts   # Admin content API
 │  │  ├─ sitemap.ts                  # SEO sitemap
 │  │  └─ robots.ts                   # SEO robots
-│  ├─ components/                    # UI components (Navbar/Footer/etc.)
+│  ├─ components/                    # Reusable UI components
 │  ├─ data/                          # Site content/constants
-│  └─ lib/                           # utilities (i18n, rate limit, helpers)
-├─ emails/                            # MJML templates
-├─ scripts/                           # automation scripts
-├─ .env.example                       # environment variable template
+│  └─ lib/                           # Utilities (i18n, rate limit, helpers)
+├─ emails/                           # MJML templates
+├─ scripts/                          # Automation and deployment scripts
+├─ .env.example                      # Environment variable template
 ├─ next.config.mjs
 ├─ tailwind.config.ts
 ├─ postcss.config.mjs
 ├─ tsconfig.json
 └─ package.json
-```
-
----
-
-## Requirements
-
-- **Node.js 18+** (recommended: Node 20 LTS)
-- **npm** (or the package manager used in your workflow)
-
----
-
-## Setup
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create your local environment file (recommended):
-
-- Copy `.env.example` → `.env.local` (or follow your team convention)
-- Fill in values as needed (email provider keys, admin token, etc.)
-
----
-
-## Development
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Then open the URL shown in the terminal (commonly `http://localhost:3000`).
-
----
-
-## Build & Start (Production)
-
-Build:
-
-```bash
-npm run build
-```
-
-Start:
-
-```bash
-npm run start
-```
-
----
-
-## Email Templates (MJML)
-
-MJML templates live in:
-
-- `emails/inquiry-confirmation.mjml`
-- `emails/follow-up.mjml`
-- `emails/newsletter.mjml`
-
-If you use MJML CLI, you can compile like:
-
-```bash
-npx mjml emails/inquiry-confirmation.mjml -o emails/out/inquiry-confirmation.html
-```
-
-(Adjust to your preferred folder structure.)
-
----
-
-## Security Notes
-
-- Do **not** commit secrets (API keys, tokens, SMTP credentials).
-- Keep environment variables in `.env.local` (ignored by Git).
-- API routes include a **rate limit** helper; tune it based on traffic needs.
-
----
-
-## CI (GitHub Actions)
-
-A basic CI workflow is included in:
-
-`.github/workflows/ci.yml`
-
-It installs dependencies and runs build (and lint if available) on every push/PR.
-
----
