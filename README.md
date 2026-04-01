@@ -1,7 +1,6 @@
 # Full-Stack Contact Platform (Next.js + TypeScript + Tailwind)
 
 **Live Demo:** https://nextjs-fullstack-contact-platform.vercel.app/  
-**Repository:** https://github.com/ebarrm-a11y/nextjs-fullstack-contact-platform
 
 A production-oriented full-stack web application built with **Next.js App Router** and **TypeScript**, designed to demonstrate **systems integration, API-driven workflows, reusable architecture, and structured frontend/backend development**.
 
