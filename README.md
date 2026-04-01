@@ -1,10 +1,9 @@
 # Full-Stack Contact Platform (Next.js + TypeScript + Tailwind)
 
-## Live Demo
+**Live Demo:** https://nextjs-fullstack-contact-platform.vercel.app/  
+**Repository:** https://github.com/ebarrm-a11y/nextjs-fullstack-contact-platform
 
-[View Live Demo](https://nextjs-fullstack-contact-platform.vercel.app/)
-
-A full-stack web application built with **Next.js App Router** and **TypeScript**, focused on **systems integration, API-driven workflows, reusable architecture, and production-oriented frontend/backend structure**.
+A production-oriented full-stack web application built with **Next.js App Router** and **TypeScript**, designed to demonstrate **systems integration, API-driven workflows, reusable architecture, and structured frontend/backend development**.
 
 This project was designed to demonstrate practical engineering around:
 
@@ -13,6 +12,12 @@ This project was designed to demonstrate practical engineering around:
 - **Rate limiting and environment-based configuration**
 - **Email template integration** with MJML
 - **Deployment and CI-ready project structure**
+
+---
+
+## Why I Built This
+
+I built this project to practice full-stack development with a production-minded structure, combining frontend implementation, API route design, reusable components, deployment workflow, and environment-based configuration in a single application.
 
 ---
 
@@ -65,7 +70,7 @@ This project was designed to demonstrate practical engineering around:
 
 ## Project Structure
 
-```txt
+```txt id="qevc9u"
 .
 ├─ src/
 │  ├─ app/
